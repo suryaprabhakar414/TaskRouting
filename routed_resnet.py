@@ -256,6 +256,7 @@ class ResNet(nn.Module):
         # See note [TorchScript super()]
         x = self.conv1(x)
         x = self.bn1(x)
+        x = self.task1(x)
         x = self.relu(x)
         x = self.maxpool(x)
 
